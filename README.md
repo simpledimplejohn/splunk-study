@@ -43,7 +43,7 @@ Notes and workbooks created here
 10. ConfiguringForwarders 5%
     - Configure Forwarders
     - additional Options
-11. Forwarder Managment **10%**
+11. Forwarder Managment 10%
     - deployment managemnet
     - Deplyoment Server
     - deployment apps

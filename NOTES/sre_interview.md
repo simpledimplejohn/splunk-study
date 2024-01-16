@@ -7,6 +7,7 @@
     - s3 bucket data downloads
 - Sensitive Data Scanning
 - Selenium Automation
+- NewRelic Synthetics 
 - AI training for slack chanel 
 - User education
     - Confluence documentation
@@ -17,7 +18,13 @@
 - Data Dog tutorial
     - data ingestions
     - building panels 
+- AWS basics
+- Linux basics
+- Jenkins?
 
+## sre notes
+- change management
+- roll back
 
 ## Insite Global :
 Insight Global is seeking a Junior Site Reliability Engineer to join a development team to monitor the environment. They will:
