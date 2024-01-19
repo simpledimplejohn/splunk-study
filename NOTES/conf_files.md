@@ -86,4 +86,15 @@ vi props.conf
 - List of monitoring paths
     - johnblalock@Johns-MBP bin % ./splunk btool inputs list monitor
     - ./splunk btool inputs list monitor --debug
+        - debug shows the file paths where the monitoring paths are located
+    - ./splunk btool props list vendor_sales --debug
+        - looking for a specific source type
+        - this is under the learned app which is where splunk dynamically learns sourcetypes
+
+## btool with restapi or curl
+- Show all configuration files pressent:
+    - | rest services/properties
+    - | rest services/properties/props/default/ADD_EXTRA_TIME_FIELDS
+        - keep using slashes to drill down and find the value eventually
+        
 
