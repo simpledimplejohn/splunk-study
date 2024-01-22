@@ -1,0 +1,73 @@
+# ingestion inputs
+- Data Administrator
+    - inputs data
+- System Administrator
+    - instalation
+    - manages indexes
+    - licenses
+    - configures security
+    - monitors the platform
+- DATA inputs
+    - Data source configured to send to splunk
+    - sends to the indexer where parsing happens
+    - during indexing streams are turned into searchable events
+- Types of inputs
+    - files and folder (most common) .txt .log
+    - TCP/UDP listener
+    - HTTP event collector
+    - Scripted input (any type of data) uses UF
+    - Windows input (windows event log)
+    - Add-ons (custom apps)
+    - Splunk Web (directly add)
+    - CLI (commads)
+    - Modular inputs (write your own code)
+    - FIFO stack?
+- FISHBUCKET (UF makes sure the data is not read twice)
+## Upload Data
+- TYPES 
+    - txt files .log .csv trace
+    - pre-trained sourcetypes 
+    - zip files (it unzips them)
+    - need valid time stamps
+- Sourcetype
+    - catogorizes data
+    - pretrained sourcetypes
+    - defined in props.conf on indexer or HF
+    - Pre-trained
+        - Apps for specific types linux_messages_syslog, access_combined (apachi web server)
+- Phases of indexing
+    - Input phase
+        - forwarder reads data
+        - host, sorce, sourcetype added metadata
+        - inputs.conf 
+        - applied to entire data stream
+    - Paring phase
+        - broken into events
+        - timestamp added
+        - props.conf transforms.conf
+        - individual events 
+        - event level transformations
+    - Indexing phases    
+        - events segmented for searchability
+        - index built
+        - license meter runs (right before going to disk) based on amount flowing through
+        - raw data and indexer data writen to disk
+- Data pipeline
+    - Parsing (character encoding line breaking)
+    - Merging (timestramp extracted)
+    - Typing (punctuation extration and regex)
+    - Indexing pipeline (writen to disk)
+- Index time vs Search time
+    - index time
+        - inputs.conf 
+        - .conf file precedence used for these
+        - etc/system/local takes precidence
+    - search time 
+        - user KT
+        - .conf file precedence used for these
+        - etc/users/<user>/app/local takes precidence
+## DEMO
+- custom sourcetype
+    - check parsing and line breaker
+    
+
