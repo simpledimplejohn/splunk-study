@@ -130,6 +130,7 @@ WINDOWS
     - var/log/splunk/splunkd.log
 
 ## DEMO
+### Getting Logs IN
 1. downlaod and install
 2. new password
 3. `./splunk start --accept-license` (automatically accepts the liences and agrees to terems and conditions)
@@ -151,3 +152,24 @@ ON UF
 `./splunk list forward-server` list of active forwarders 
 check ip address locally `ipconfig getifaddr en0`
 `./splunk add forward-server 192.168.0.228:997` this adds forwarding to 9997
+check this with btool
+`./splunk btool outputs list`
+/Users/johnblalock/Downloads/splunkforwarder/etc/system/local/outputs.conf  (location)
+NOW ADD AN INPUT
+`./splunk add monitor /Users/johnblalock/Downloads/test_logs/*.log` it will check the path
+This ingested into main with a sourcetype
+Now lets check the inputs.conf
+`./splunk btool inputs list monitor:///Users/johnblalock/Downloads/test_logs/test_log.log --debug`
+    [monitor:///Users/johnblalock/Downloads/test_logs/test_log.log]
+    _rcvbuf = 1572864
+    disable = false
+    host = $decideOnStartup
+    index = default
+Above stanza is what that command generated
+/Users/johnblalock/Downloads/splunkforwarder/etc/apps/search/local/inputs.conf
+Also created in the search app
+
+### FORWARDING TROUBLESHOOTING
+`ps -ef|grep splunk`
+shows whats running
+`./splunk btool outputs list`
