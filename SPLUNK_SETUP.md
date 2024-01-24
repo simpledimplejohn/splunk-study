@@ -15,9 +15,16 @@ Note: For Mac OS, you can also remove the installation directory by dragging the
 
 
 ## REINSTALL 
-1. download and copy to applications
-2. /bin/ ./splunk start
-3. http://Johns-MBP.home:8000  
+for the .tgz file
+This alows multiple instalations of splunk
+service account is not created
+1. downlaod the .tgz
+2. copy to applications
+3. in terminal open splunk
+    - `tar xvzf splunk_package_name.tgz`
+    - naviagte to /bin
+    - `./splunk start --accept-license`
+4. http://Johns-MBP.home:8000  (or whatever it says in the command line)
     for the gui (search head)
 
 ## UNIVERSAL FORWARDER

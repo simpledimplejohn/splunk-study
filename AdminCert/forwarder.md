@@ -133,3 +133,21 @@ WINDOWS
 1. downlaod and install
 2. new password
 3. `./splunk start --accept-license` (automatically accepts the liences and agrees to terems and conditions)
+
+4. setting up forwarding
+ON Splunk
+`./splunk display listen` see if there is listening
+`./splunk enable listen 9997` starts listening for forwarders
+`./splunk btool inputs list` read the current inputs.conf file 
+    [splunktcp://9997]
+    _rcvbuf = 1572864
+    connection_host = ip
+    host = $decideOnStartup
+    index = default
+` ./splunk btool inputs list splunktcp://9997 --debug`
+    /Applications/splunk/etc/apps/search/local/inputs.conf 
+    shows that its in this file path inputs.conf file
+ON UF
+`./splunk list forward-server` list of active forwarders 
+check ip address locally `ipconfig getifaddr en0`
+`./splunk add forward-server 192.168.0.228:997` this adds forwarding to 9997
