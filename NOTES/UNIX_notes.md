@@ -11,3 +11,5 @@ cd ~/Desktop
     - make sure there is a space
     - ~ is the home directory
 
+curl command
+    
