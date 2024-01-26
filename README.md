@@ -1,3 +1,4 @@
+![splunk](https://github.com/simpledimplejohn/splunk-study/NOTES/splunk_image.png)
 # Splunk Study
 This repository includes files and setup instructions for building and runing a clustered environment as an adnminstrator.
 
