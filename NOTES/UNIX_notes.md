@@ -12,4 +12,6 @@ cd ~/Desktop
     - ~ is the home directory
 
 curl command
-    
+
+check ports
+    - sudo netstat -tuln 
