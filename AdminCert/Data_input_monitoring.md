@@ -7,3 +7,5 @@ Splunk_Server = 172.17.11.17
 ## SETUP
 Settings/forwarding and recieving
 - configure recieving data
+    - configure recieving on 9997
+
