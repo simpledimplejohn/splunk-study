@@ -49,3 +49,11 @@ check ports
 - rm <filename>
 - rm -r /path/to/directory
 - cp source_file destination_file
+
+## directories
+- Log files
+    /var/log applog.log
+- configration files
+    /etc
+- commands
+    /bin 
