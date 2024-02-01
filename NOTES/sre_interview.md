@@ -49,7 +49,7 @@ Top 5 requirements:
      *   Need to look at issues with files – can’t look up 1 gb of file –
      *   Need to know how to use commands to search within the file to get the right context
 
-                                                               i.      You can search in Google in 30 seconds – need right attitude to find it yourself
+        i.  You can search in Google in 30 seconds – need right attitude to find it yourself
 
   1.  SQL (must have) --- Basic SQL scripts, (queries, joins, sub-queries)
   2.  Ability to triage, investigate issues and work to resolve them pro-actively, think through how to find answers on your own
