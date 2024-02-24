@@ -11,18 +11,22 @@ Operating System
     - Apply custom settings (this can be done with manual config files in the os)
         - set username and password
         - Configure wireless lan (connect to local internet)
-- Accessing the Pi remotelly
-    - Find the ip address
-        - FIRST (at this time ifconfig is not showing the pi)
-            - `ifconfig`
-            - look for en0: 192.168.0.228 (personal machine)
-        - THIRD
-            - ping raspberrypi.local 192.168.0.105
-            - control C
-        - SECOND
-            - `ssh pi@raspberrypi.local`
-            - type yes
-            - enter password
+
+## Accessing the Pi remotelly
+- To ssh into the pi
+    - FIRST (at this time ifconfig is not showing the pi)
+        - `ifconfig`
+        - look for en0: 192.168.0.228 (personal machine)
+    - THIRD
+        - ping raspberrypi.local 192.168.0.105
+        - control C
+    - SECOND
+        - `ssh pi@raspberrypi.local`
+        - type yes
+        - enter password
+- To exit the ssh session
+    - `exit`
+
 
 ## Troubleshooting From The Pi
     - 
