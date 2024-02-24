@@ -8,7 +8,8 @@ This repository includes files and setup instructions for building and runing a 
 - Docker
     Building a clustered environment locally with Docker
 - Notes
-    General notes for reference
+    Interview Questions
+    Client Notes
 - test_log
     Logs to ingest into splunk
     - javascript.js
