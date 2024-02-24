@@ -1,5 +1,7 @@
 # Unix Commands
 
+## Basic
+clear (clears the terminal)
 ls -ltr 
     - l is long format
     - t sorts by modication order
@@ -15,9 +17,12 @@ curl command
         - options
             -H (headder)
             -k (insecure)
-check ports
-    - sudo netstat -tuln 
 
+## IP and Ports
+- inet 127.0.0.1 netmask 0xff000000 (loop back address for local servers)
+- check ports
+    - sudo netstat -tuln 
+    
 ## vi editor
 - i insert
 - :wq  

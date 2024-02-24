@@ -13,14 +13,35 @@ Operating System
         - Configure wireless lan (connect to local internet)
 - Accessing the Pi remotelly
     - Find the ip address
-        - FIRST
+        - FIRST (at this time ifconfig is not showing the pi)
             - `ifconfig`
             - look for en0: 192.168.0.228 (personal machine)
+        - THIRD
+            - ping raspberrypi.local 192.168.0.105
+            - control C
         - SECOND
             - `ssh pi@raspberrypi.local`
             - type yes
             - enter password
 
-                
+## Troubleshooting From The Pi
+    - 
 
+## Running as a server
+How to run port-back-end from the pi
+- `git clone https://github.com/simpledimplejohn/port-back-end.git`                
+- Install node
+    - `sudo apt-get update` (update os)
+    - `sudo apt-get install -y nodejs npm` (install node and npm)
+    - `node --version` `npm --version`
+- Install dependencies
+    - cd /port-back-end (where package.json is)
+    - `npm install`
+- start server `npm start` (if its in the package.json)
+- OR `node server.js`
 
+## Hit the endpoint with postman
+- `http://192.168.0.105:3000/log`
+
+## Install the Splunk Universal Forwarder
+- 
