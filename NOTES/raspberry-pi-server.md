@@ -18,7 +18,7 @@ Operating System
         - `ifconfig`
         - look for en0: 192.168.0.228 (personal machine)
     - THIRD
-        - ping raspberrypi.local 192.168.0.105
+        - `ping raspberrypi.local` 192.168.0.105
         - control C
     - SECOND
         - `ssh pi@raspberrypi.local`
