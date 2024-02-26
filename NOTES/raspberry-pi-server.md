@@ -48,4 +48,4 @@ How to run port-back-end from the pi
 - `http://192.168.0.105:3000/log`
 
 ## Install the Splunk Universal Forwarder
-- 
+- there is an issue here with ARM chip...

@@ -38,8 +38,31 @@ Using linux machines on aws.
 - Set up a security group for managing the port access
 - Install Splunk
 wget -O splunk-9.2.0.1-d8ae995bf219-Linux-x86_64.tgz "https://download.splunk.com/products/splunk/releases/9.2.0.1/linux/splunk-9.2.0.1-d8ae995bf219-Linux-x86_64.tgz"
+- extract the tgz file with
+`tar xvzf splunk-9.2.0.1-d8ae995bf219-Linux-x86_64.tgz`
+- start splunk with 
+`./bin/splunk start`
+- set up security groups for these ports
+	Checking http port [8000]: open
+	Checking mgmt port [8089]: open
+	Checking appserver port [127.0.0.1:8065]: open
+	Checking kvstore port [8191]: open
+    - 8000 and 8089 accessable
+- go to the address provided when you run the start command
+## troubleshooting splunk
+- unable to access the gui
+    - use a telnet command 
+    - `brew install telnet`
+    - `http://3.91.208.198:8000` to access splunk 
 
 ## Install Splunk UF
 wget -O splunkforwarder-9.2.0-1fff88043d5f-Linux-x86_64.tgz "https://download.splunk.com/products/universalforwarder/releases/9.2.0/linux/splunkforwarder-9.2.0-1fff88043d5f-Linux-x86_64.tgz"
 - Run the setup for the UF
-
+    - `tar xvzf splunkforwarder.....tgz`
+    - start the forwarder
+        `~/bin/splunk start`
+    - create the inputs.conf file in `etc/apps/search/inputs.conf` and add the stanza
+        [monitor:///home/ubunutu/port-back-end/log/app_logs.log] 
+        sourcetype: app_logs
+        index: port-back-end
+    - create the index port-back-end on the GUI
