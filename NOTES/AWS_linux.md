@@ -57,12 +57,23 @@ wget -O splunk-9.2.0.1-d8ae995bf219-Linux-x86_64.tgz "https://download.splunk.co
 
 ## Install Splunk UF
 wget -O splunkforwarder-9.2.0-1fff88043d5f-Linux-x86_64.tgz "https://download.splunk.com/products/universalforwarder/releases/9.2.0/linux/splunkforwarder-9.2.0-1fff88043d5f-Linux-x86_64.tgz"
-- Run the setup for the UF
+- Setting up forwarding
     - `tar xvzf splunkforwarder.....tgz`
     - start the forwarder
         `~/bin/splunk start`
-    - create the inputs.conf file in `etc/apps/search/inputs.conf` and add the stanza
+    - create the folder local in `etc/apps/search/local`
+    - create the inputs.conf file in `etc/apps/search/local/inputs.conf` and add the stanza
         [monitor:///home/ubunutu/port-back-end/log/app_logs.log] 
         sourcetype: app_logs
         index: port-back-end
-    - create the index port-back-end on the GUI
+    - In the Splunk instance
+        - create the index port-back-end on the GUI
+        - add listening to port 9997
+    - In the forwarder
+        - add the inputs.conf with the command
+            `./splunk add forward-server 54.85.47.216:9997`
+
+## Cloudwatch
+- Metrics in cloudwatch
+- store in paramater
+
